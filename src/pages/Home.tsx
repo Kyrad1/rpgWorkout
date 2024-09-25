@@ -1,22 +1,42 @@
-import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/react';
-import ExploreContainer from '../components/ExploreContainer';
+import { IonCard, IonCardContent, IonContent, IonHeader, IonIcon, IonPage, IonTitle, IonToolbar } from '@ionic/react';
+import {settings} from 'ionicons/icons'
 import './Home.css';
 
 const Home: React.FC = () => {
   return (
     <IonPage>
       <IonHeader>
-        <IonToolbar>
-          <IonTitle>Blank</IonTitle>
-        </IonToolbar>
+        
       </IonHeader>
-      <IonContent fullscreen>
-        <IonHeader collapse="condense">
-          <IonToolbar>
-            <IonTitle size="large">Blank</IonTitle>
-          </IonToolbar>
-        </IonHeader>
-        <ExploreContainer />
+      <IonContent color='bgcolor' >
+      <div className="cardContainer">
+        <IonCard color='btoncolor'>
+          <IonCardContent class='buttonMenuText'>
+          <p className='text'>QUEST!</p>
+          </IonCardContent>
+        </IonCard>
+      </div>
+      <div className='nombreLvlClass'>
+      <p>Kyrad/lvl 1/Guerrero</p>
+      </div>
+      
+      <div className='imageContainer'>
+        <img src='https://img.itch.zone/aW1nLzE1NjY5NzM0LnBuZw==/315x250%23c/pJGQ5Y.png' className="custom-image"/>
+      </div>
+      <div className="cardContainer">
+        <IonCard color='btoncolor'>
+          <IonCardContent class='buttonMenuText'>
+          <p className='text'>WORKOUT PLAN</p>
+          </IonCardContent>
+        </IonCard>
+      </div>
+      <div className="cardSettingsContainer">
+        <IonCard className='settingsCard' color='btoncolor'>
+          <IonCardContent class='buttonMenuText'>
+            <IonIcon icon={settings} size='large'/>
+          </IonCardContent>
+        </IonCard>
+      </div>
       </IonContent>
     </IonPage>
   );
