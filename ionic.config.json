@@ -1,0 +1,7 @@
+{
+  "name": "GameWorkOut",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react-vite"
+}
