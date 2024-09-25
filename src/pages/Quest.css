@@ -1,0 +1,15 @@
+.barraSuperior{
+    display: flex;
+    height: 40px;
+    width: 420px;
+    background-color: #19206C;
+    margin-top: 60px;
+    align-items: center;
+}
+.textStyle{
+    margin-left: 70px;
+    justify-content: center;
+    text-align: center;
+    font-size: 30px !important;
+    font-family: "Graduate", serif;
+}

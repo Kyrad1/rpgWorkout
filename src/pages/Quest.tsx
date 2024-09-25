@@ -1,6 +1,7 @@
-import { IonCard, IonCardContent, IonContent, IonHeader, IonIcon, IonPage, IonTitle, IonToolbar } from '@ionic/react';
-import './Home.css';
-import {chevronBackCircle} from 'ionicons/icons'
+import { IonCard, IonCardContent, IonCardHeader, IonContent, IonHeader, IonIcon, IonPage, IonTitle, IonToolbar } from '@ionic/react';
+import './Quest.css';
+import {alertCircle} from 'ionicons/icons'
+
 
 const Quest: React.FC = () => {
   return (
@@ -9,8 +10,12 @@ const Quest: React.FC = () => {
         
       </IonHeader>
       <IonContent color='bgcolor' >
-    
-            <IonCard href='Home'><IonIcon icon={chevronBackCircle} size='large'/></IonCard>
+        <div className='barraSuperior'>
+          <IonIcon icon={alertCircle} size='large' color='light' />
+           <p className='textStyle'>Quest Info</p>
+        </div>
+
+            
       </IonContent>
     </IonPage>
   );
