@@ -10,7 +10,7 @@ const Home: React.FC = () => {
       </IonHeader>
       <IonContent color='bgcolor' >
       <div className="cardContainer">
-        <IonCard color='btoncolor'>
+        <IonCard color='btoncolor' href='Quest'>
           <IonCardContent class='buttonMenuText'>
           <p className='text'>QUEST!</p>
           </IonCardContent>
@@ -21,7 +21,7 @@ const Home: React.FC = () => {
       </div>
       
       <div className='imageContainer'>
-        <img src='https://img.itch.zone/aW1nLzE1NjY5NzM0LnBuZw==/315x250%23c/pJGQ5Y.png' className="custom-image"/>
+        <img src='/public/img/warriorIdle.png' className="custom-image"/>
       </div>
       <div className="cardContainer">
         <IonCard color='btoncolor'>
