@@ -1,61 +1,62 @@
-.ionContent{
-    background-color: #1d0994;
+.campfireImageDiv {
+  background: radial-gradient(circle, rgb(160, 120, 35) -60%, #09003B 70%);
+  display: flex;                
+  justify-content: center;      
+  align-items: center;          
+  height: 40vh;  
+  border-radius: 15px;           
 }
-.cardContainer {
-    display: flex;
-    justify-content: center; /* Centrar horizontalmente */
-    margin-top: 40px;    /* Centrar verticalmente */
-    height: 130px;           /* Altura de la pantalla completa */
-  }
+
+img {
+  max-width: 100%;              
+  height: auto;                 
+  filter: brightness(1.2); 
   
-  ion-card {
-    width: 300px;
-    height: 80px;            /* Ancho de la card */
-  }
-  .buttonMenuText {
-    display: flex;
-    justify-content: center;  /* Centrar horizontalmente */
-    align-items: center;      /* Centrar verticalmente */
-    height: 100%;             /* Asegurar que ocupe todo el espacio vertical */
-    text-align: center;       /* Alinear el texto en el centro horizontalmente (por si acaso) */
-  }
-  .custom-image {
-    display: flex;
-    justify-content: center; /* Centrar horizontalmente */
-    width: 100%;      /* Ajusta el ancho al 100% del contenedor */
-    height: auto;     /* Mantiene la proporción de la imagen */
-    max-width: 200px; /* Define un ancho máximo */
-    max-height: 180px; /* Define una altura máxima */
-  }
-  .imageContainer{
-    display: flex;
-    justify-content: center; /* Centrar horizontalmente */
-    height: 150px;           /* Altura de la pantalla completa */
-  }
-  .cardSettingsContainer {
-    display: flex;
-    justify-content: center; /* Centrar horizontalmente */
-       /* Centrar verticalmente */
-    }
-  .settingsCard{
-    width: 100px;
-    height: 70px;
-  }
-  .text {
-
-    font-size: 30px !important;
-    font-family: "Graduate", serif;
-    
-  }
-  p     {
-
-    font-size: 15px;
-    font-family: "Graduate", serif;
-    
-  }
-  .nombreLvlClass{
-    display: flex;
-    justify-content: center; /* Centrar horizontalmente */
-       /* Centrar verticalmente */
-  }
- 
+}
+.menuHeader{
+  --background: #1d0994; /* Cambia este color al que desees */
+  color: white; /* Cambia el color del texto */
+}
+.menuHeader ion-toolbar {
+  --background: #1d0994; /* Cambia este color al que desees */
+  color: white; /* Cambia el color del texto */
+}
+.menuHeader ion-title {
+  color: white; /* Cambia el color del título */
+  font-family: "Graduate", serif; /* Aplica la fuente personalizada */
+}
+p{
+  font-family: "Graduate", serif;
+}
+.cardContainer{
+  
+  display: flex;
+  width: auto;
+  height: auto;
+  justify-content: center;
+  
+  
+}
+.cardButton{
+  height: 100px;
+  width: 300px;
+}
+.text{
+  font-size: 25px!important;
+  margin-left: 30px;
+  
+}
+.text2{
+  font-size: 40px!important;
+  margin-left: 30px;
+  
+}
+.cardContainer2{
+  margin-left: 150px;
+  display: flex;
+  width: auto;
+  height: auto;
+  justify-content: center;
+  
+  
+}

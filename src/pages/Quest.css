@@ -1,15 +1,169 @@
 .barraSuperior{
     display: flex;
-    height: 40px;
-    width: 420px;
+    height: 30px;
     background-color: #19206C;
-    margin-top: 60px;
+    margin-top: 40px;
     align-items: center;
 }
 .textStyle{
-    margin-left: 70px;
+    margin-left: 30px;
     justify-content: center;
     text-align: center;
     font-size: 30px !important;
     font-family: "Graduate", serif;
+}
+.alertIcon{
+    margin-left: 30px;
+    font-size: 70px;
+}
+.backIcon{
+    color: aliceblue;
+    position: absolute;
+    font-size: 50px;
+    margin-left: 10px;
+    margin-top: -30px;
+    z-index: 10;
+}
+.backButton{
+    background-color: transparent; 
+    box-shadow: none; 
+    border: none; 
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    height: 50px; 
+    width: 60px; 
+}
+
+.quest1Message{
+    height: 10px;
+    display: flex;
+    align-items: center;
+    margin-top: 40px;
+    margin-left: 130px;
+    
+}
+.quest2Message{
+    display: flex;
+    align-items: center;
+    margin-left: 50px;
+    margin-right: 50px;
+    
+}
+
+.barraGoals{
+    display: flex;
+    height: 30px;
+    background-color:#448D4E ;
+    margin-top: 10px;
+}
+.textStyleGoals{   
+    width: 100px;
+    margin-top: -5px;
+    margin-left: 20px;
+    justify-content: center;
+    text-align: center;
+    font-size: 30px !important;
+    font-family: "Graduate", serif;
+}
+.dumbbellIcon{
+    margin-left: 70px;
+    margin-top: -15px;
+    font-size: 60px;
+}
+
+.dumbbellIcon2{
+    margin-left: 20px;
+    margin-top: -15px;
+    font-size: 60px;
+}
+.excerciseBarra{
+    display: flex;
+    height: 60px;
+    margin-top: 40px;
+    background-color: #09003B;
+
+}
+.excerciseText{
+    width: 200px;
+    margin-top: 17px;
+    margin-left: 20px;
+    justify-content: center;
+    text-align: start;
+    font-size: 20px !important;
+    font-family: "Graduate", serif;
+
+}
+.excerciseSetNumber{
+    color: #448D4E;
+    width: 100px;
+    margin-left: -30px;
+    margin-top: 10px;
+    justify-content: center;
+    text-align: start;
+    font-size: 30px !important;
+    font-family: "Graduate", serif;
+
+}
+.plusButton{
+    border:1px solid white;
+    width: 25px;
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 25px;
+    background-color:#8FD14F ;
+}
+.minusButton{
+    border:1px solid white;
+    width: 25px;
+    margin-left: 10px;
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 25px;
+    background-color:#F24726 ;
+}
+.caution{
+    display: flex;
+    margin-top: 80px;
+    color: #F24726;
+    font-size: 22px !important;
+    font-family: "Graduate", serif;
+    margin-left: 20px;
+
+}
+.cautionMessage{
+    margin-left: 20px;
+    margin-top: -5px;
+    font-size: 20px;
+}
+.restTime{
+    
+    margin-top: 50px;
+    margin-left: 130px;
+}
+.restTimeIcon{
+    margin-top: 20px;
+    margin-left: 160px;
+}
+.time{
+    font-size: 20px;
+}
+.timerIcon{
+    font-size: 80px;
+}
+
+.checkButton{
+    background-color: #652CB3;
+    border:1px solid white;
+    width: 25px;
+    margin-left: 10px;
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 25px;
 }
