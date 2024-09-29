@@ -1,0 +1,135 @@
+.barraSuperior{
+    display: flex;
+    height: 30px;
+    background-color: #19206C;
+    margin-top: 40px;
+    align-items: center;
+}
+.textStyle{
+    margin-left: 30px;
+    justify-content: center;
+    text-align: center;
+    font-size: 30px !important;
+    font-family: "Graduate", serif;
+}
+.alertIcon{
+    color:aliceblue;
+    margin-left: 30px;
+    font-size: 70px;
+}
+.backIcon{
+    color: aliceblue;
+    position: absolute;
+    font-size: 50px;
+    margin-left: 10px;
+    margin-top: -30px;
+    z-index: 10;
+}
+.backButton{
+    background-color: transparent; 
+    box-shadow: none; 
+    border: none; 
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    height: 50px; 
+    width: 60px; 
+}
+
+.quest1Message{
+    height: 10px;
+    display: flex;
+    align-items: center;
+    margin-top: 40px;
+    margin-left: 130px;
+
+}
+.quest2Message{
+    display: flex;
+    align-items: center;
+    margin-left: 50px;
+    margin-right: 50px;
+
+}
+.statsStyle{
+    margin-left: 60px;
+    margin-top: 80px;
+    justify-content: center;
+    text-align: left;
+    font-size: 30px !important;
+    font-family: "Graduate", serif;
+}
+.stats2Style{
+    margin-left: 60px;
+    margin-top: 30px;
+    justify-content: center;
+    text-align: left;
+    font-size: 30px !important;
+    font-family: "Graduate", serif;
+}
+.stats3Style{
+    margin-right: 80px;
+    margin-top: 30px;
+    justify-content: center;
+    font-size: 30px !important;
+    font-family: "Graduate", serif;
+}
+
+.stats4Style{
+    margin-right: 90px;
+    margin-top: 30px;
+    justify-content: center;
+    font-size: 30px !important;
+    font-family: "Graduate", serif;
+}
+
+.statsStyleRight{
+    margin-left: 220px;
+    margin-top: 50px;
+    justify-content: center;
+    text-align: left;
+    font-size: 30px !important;
+    font-family: "Graduate", serif;
+}
+.plusButton{
+    border:1px solid white;
+    width: 25px;
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 25px;
+    background-color:#8FD14F ;
+}
+.plus2Button {
+    position: absolute;
+    border: 1px solid white;
+    width: 25px;
+    margin-top: 55px;
+    margin-left: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 25px;
+    background-color: #8FD14F; /* Esto empuja el botón desde la derecha */
+}
+.plus3Button {
+    position: absolute;
+    border: 1px solid white;
+    width: 25px;
+    margin-top: 5px;
+    margin-left: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 25px;
+    background-color: #8FD14F; /* Esto empuja el botón desde la derecha */
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    height: 80px;
+    justify-content: space-between; /* Empuja todos los elementos hacia la derecha */
+}
+

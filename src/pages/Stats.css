@@ -1,0 +1,34 @@
+
+.stats4Style{
+    position: absolute;
+    margin-left: 330px;
+    margin-top: 30px;
+    justify-content: center;
+    font-size: 30px !important;
+    font-family: "Graduate", serif;
+}
+.stats5Style{
+    margin-left: 30px;
+    margin-top: 30px;
+    justify-content: center;
+    text-align: left;
+    font-size: 30px !important;
+    font-family: "Graduate", serif;
+}
+
+.stats6Style{
+    
+    margin-right: 100px;
+    margin-top: 30px;
+    justify-content: center;
+    font-size: 30px !important;
+    font-family: "Graduate", serif;
+}
+
+.container2 {
+    display: flex;
+    align-items: center;
+    height: 50px;
+    justify-content: space-between; /* Empuja todos los elementos hacia la derecha */
+}
+

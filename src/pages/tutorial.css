@@ -1,0 +1,27 @@
+.textoInicio{
+    display: flex;
+    height: 25%;
+    justify-content: center;
+    align-items: center;
+}
+.divFantasma{
+    display: flex;
+    height: 10%;
+    justify-content: center;
+    align-items: center;
+}
+.createNew{
+    height: 30%;
+    width: 45%;
+    background-color: #19206C;
+}
+.mensajeTutorial{
+    margin-left: 10%;
+    margin-right: 10%;
+    font-size: 20px;
+}
+.imagenTutorial{
+    margin-left: 5%;
+    margin-right: 5%;
+    width: 90%;    
+}

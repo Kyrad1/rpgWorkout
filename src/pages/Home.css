@@ -7,7 +7,7 @@
   border-radius: 15px;           
 }
 
-img {
+.homeImg {
   max-width: 100%;              
   height: auto;                 
   filter: brightness(1.2); 
@@ -26,6 +26,7 @@ img {
   font-family: "Graduate", serif; /* Aplica la fuente personalizada */
 }
 p{
+  color: aliceblue;
   font-family: "Graduate", serif;
 }
 .cardContainer{
@@ -59,4 +60,17 @@ p{
   justify-content: center;
   
   
+}
+.loginButton{
+  background-color: transparent; 
+  box-shadow: none; 
+  border: none; 
+  display: flex; 
+  justify-content: center;
+  align-items: center;
+  height: 50px; 
+  width: 60px; 
+}
+.header{
+  display: flex;
 }

@@ -1,0 +1,40 @@
+.statsStyleRight2{
+    margin-left: 100px;
+    margin-top: 10px;
+    justify-content: center;
+    text-align: left;
+    font-size: 25px !important;
+    font-family: "Graduate", serif;
+}
+.statsStyleRight3{
+    margin-left: 130px;
+    margin-top: 10px;
+    justify-content: center;
+    text-align: left;
+    font-size: 25px !important;
+    font-family: "Graduate", serif;
+}
+
+.holderStyle{
+    margin-left: 20px;
+    margin-top: 30px;
+    justify-content: center;
+    text-align: left;
+    font-size: 25px !important;
+    font-family: "Graduate", serif;
+}
+.barraSuperior2{
+    display: flex;
+    height: 30px;
+    margin-top: 40px;
+    align-items: center;
+    justify-content: center;
+}
+.stats7Style{
+    margin-left: 30px;
+    margin-top: 30px;
+    justify-content: center;
+    text-align: left;
+    font-size: 25px !important;
+    font-family: "Graduate", serif;
+}

@@ -5,6 +5,9 @@ import {alertCircle,arrowBackCircle,barbell,checkmark,chevronDown,chevronUp, sto
 
 
 const Quest: React.FC = () => {
+  const newQuest = new Audio('/public/audio/newQuest.mp3');
+    newQuest.volume = 0.1
+    newQuest.play()
   return (
     <IonPage>
       <IonHeader>
