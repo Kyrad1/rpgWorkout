@@ -27,10 +27,15 @@ import Tutorial from './pages/Tutorial';
 import Status from './pages/Status';
 import Stats from './pages/Stats';
 import Perfil from './pages/Perfil';
+import GameScene from './pages/GameScene';
+import Plan from './pages/Plan';
+
 
 setupIonicReact();
 
 const App: React.FC = () => (
+  
+  
   <IonApp>
     <IonReactRouter>
       <IonRouterOutlet>
@@ -58,6 +63,13 @@ const App: React.FC = () => (
         <Route exact path="/perfil">
           <Perfil></Perfil>
         </Route>
+        <Route exact path="/gamescene">
+          <GameScene></GameScene>
+        </Route>
+        <Route exact path="/plan">
+        <Plan></Plan>
+        </Route>
+        
         
       </IonRouterOutlet>
     </IonReactRouter>

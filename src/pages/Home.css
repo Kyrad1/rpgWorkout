@@ -1,5 +1,5 @@
 .campfireImageDiv {
-  background: radial-gradient(circle, rgb(160, 120, 35) -60%, #09003B 70%);
+  background: radial-gradient(circle, rgb(160, 120, 35) -50%, #09003B 70%);
   display: flex;                
   justify-content: center;      
   align-items: center;          
@@ -14,20 +14,23 @@
   
 }
 .menuHeader{
-  --background: #1d0994; /* Cambia este color al que desees */
-  color: white; /* Cambia el color del texto */
+  --background: #1d0994; 
+  color: white; 
 }
 .menuHeader ion-toolbar {
-  --background: #1d0994; /* Cambia este color al que desees */
-  color: white; /* Cambia el color del texto */
+  --background: #1d0994; 
+  color: white; 
 }
 .menuHeader ion-title {
-  color: white; /* Cambia el color del título */
-  font-family: "Graduate", serif; /* Aplica la fuente personalizada */
+  color: white; 
+  font-family: "Graduate", serif; 
 }
 p{
   color: aliceblue;
   font-family: "Graduate", serif;
+}
+.menu{
+  color: black;
 }
 .cardContainer{
   

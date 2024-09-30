@@ -29,10 +29,13 @@ const Home: React.FC = () => {
         <IonContent className="ion-padding" color="bgcolor">
           <IonList>
             <IonItem>
-              <IonLabel><p>Perfil</p></IonLabel>
+              <IonLabel><p>Tienda</p></IonLabel>
             </IonItem>
             <IonItem>
-              <IonLabel><p>Plan de entrenamiento</p></IonLabel>
+              <IonLabel><a href='/GameScene'><p className='menu'>Game Scene</p></a></IonLabel>
+            </IonItem>
+            <IonItem>
+              <IonLabel><p>Inventario</p></IonLabel>
             </IonItem>
             
             <IonItem>
@@ -74,7 +77,7 @@ const Home: React.FC = () => {
           </IonCard>
         </div>
         <div className="cardContainer">
-          <IonCard color='btoncolor' className='cardButton'>
+          <IonCard href='/plan' color='btoncolor' className='cardButton'>
             <IonCardContent class='buttonMenuText'>
             <p className='text'>Crea tu plan de entrenamiento</p>
             </IonCardContent>

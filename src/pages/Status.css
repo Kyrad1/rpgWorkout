@@ -111,7 +111,7 @@
     justify-content: center;
     align-items: center;
     height: 25px;
-    background-color: #8FD14F; /* Esto empuja el botón desde la derecha */
+    background-color: #8FD14F; 
 }
 .plus3Button {
     position: absolute;
@@ -123,13 +123,21 @@
     justify-content: center;
     align-items: center;
     height: 25px;
-    background-color: #8FD14F; /* Esto empuja el botón desde la derecha */
+    background-color: #8FD14F; 
 }
 
-.container {
+.container{
     display: flex;
     align-items: center;
     height: 80px;
-    justify-content: space-between; /* Empuja todos los elementos hacia la derecha */
+    justify-content: space-between; 
+}
+.container2 {
+    height: 10%;
+    margin-left: 60px;
+    display: flex;
+    align-items: center;
+    height: 80px;
+    
 }
 

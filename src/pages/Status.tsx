@@ -43,7 +43,7 @@ const Status: React.FC = () => {
             <IonIcon icon={chevronUp} size="large"></IonIcon>
             </div>
         </div>
-        <div><a href='/stats'><p>detalles</p></a><p className='statsStyleRight'> Extra Points: 1</p></div>
+        <div><a className="container2"href='/stats'><p>detalles</p></a><p className='statsStyleRight'> Extra Points: 1</p></div>
         
         
             </IonContent>

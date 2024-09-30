@@ -1,0 +1,56 @@
+.ExerciseContainer {
+    display: flex;
+    align-items: center; 
+    margin-top: 20px;   
+    height: 130px;
+    justify-content: space-between;           
+  }
+
+  .container {
+    display: flex;
+    align-items: center;
+    height: 80px;
+    justify-content: space-between; 
+}
+
+.buttonExerciseText {
+    display: flex;
+    justify-content: center;  
+    align-items: center;      
+    height: 40%;             
+    text-align: center;       
+  }
+
+.smallCard {
+    width: 50px;
+    height: 45px;
+}
+.mediumCard {
+    width: 140px;
+    height: 50px;
+}
+
+.textCenter {
+    text-align: center;
+    margin-top: 5%;
+    font-size: 30px !important;
+    font-family: "Graduate", serif;
+    
+}
+.cardContainerCenter {
+    display: flex;
+    justify-content: center; 
+    height: 130px;          
+}
+.textExercise{
+    font-size: 25px!important;
+    margin-left: 30px;
+    
+  }
+  .buttonMenuText {
+    display: flex;
+    justify-content: center;  
+    align-items: center;      
+    height: 100%;            
+    text-align: center;      
+  }
