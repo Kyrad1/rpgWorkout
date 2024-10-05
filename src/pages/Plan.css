@@ -1,16 +1,17 @@
 .ExerciseContainer {
+    width: 100vw;
     display: flex;
     align-items: center; 
     margin-top: 20px;   
     height: 130px;
-    justify-content: space-between;           
+    justify-content: center;           
   }
 
   .container {
     display: flex;
     align-items: center;
     height: 80px;
-    justify-content: space-between; 
+    justify-content: center; 
 }
 
 .buttonExerciseText {
@@ -42,15 +43,21 @@
     justify-content: center; 
     height: 130px;          
 }
-.textExercise{
-    font-size: 25px!important;
-    margin-left: 30px;
-    
-  }
+.textExercise {
+  font-size: 30px !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center; /* Para asegurar el centrado del texto */
+  height: 100%; /* Si es necesario ocupar todo el espacio del contenedor */
+  margin: 0; /* Para asegurarse que no tenga margenes no deseados */
+}
+
   .buttonMenuText {
+    width: 100vw;
     display: flex;
-    justify-content: center;  
+    
     align-items: center;      
     height: 100%;            
-    text-align: center;      
+        
   }

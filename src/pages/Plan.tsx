@@ -6,9 +6,7 @@ const Plan: React.FC = () => {
     return (
         <IonPage>
             <IonContent color="bgcolor">
-                <div className="container2">
-                <IonCard href='/home' className='backButton'><IonIcon icon={arrowBackCircle} className='backIcon'></IonIcon></IonCard>
-                </div>
+            <IonCard href='/home' className='backButton'><IonIcon icon={arrowBackCircle} className='backIcon'></IonIcon></IonCard>
                 <div className='barraSuperior'>
                 <IonSegment scrollable={true} value="default">
                     <IonSegmentButton value="first">
@@ -52,45 +50,23 @@ const Plan: React.FC = () => {
                 </div>
 
                 <div className='ExerciseContainer'>
-                <IonCard color='btoncolor' >
+                <IonCard color='btoncolor' href='/excercisepage' >
                     <IonCardContent class='buttonMenuText'>
-                        <p className='textExcercise'>Excercise!</p>
+                        <p className='textExcercise'>Push ups</p>
                     </IonCardContent>
                 </IonCard>
                 
-                <IonCard className='smallCard' color='btoncolor'>
-                    <IonInput   placeholder="KG">
-                    </IonInput>
-                </IonCard>
-                <IonCard className='smallCard' color='btoncolor'>
-                    <IonInput   placeholder="SETS">
-                    </IonInput>
-                </IonCard>
-                <IonCard className='smallCard' color='btoncolor'>
-                    <IonInput   placeholder="REPS">
-                    </IonInput>
-                </IonCard>
+                
                 </div>
 
                 <div className='ExerciseContainer'>
-                <IonCard color='btoncolor'>
+                <IonCard color='btoncolor' href='/excercisepage'>
                     <IonCardContent class='buttonMenuText'>
                         <p className='textExcercise'>Excercise!</p>
                     </IonCardContent>
                 </IonCard>
                 
-                <IonCard className='smallCard' color='btoncolor'>
-                    <IonInput   placeholder="KG">
-                    </IonInput>
-                </IonCard>
-                <IonCard className='smallCard' color='btoncolor'>
-                    <IonInput   placeholder="SETS">
-                    </IonInput>
-                </IonCard>
-                <IonCard className='smallCard' color='btoncolor'>
-                    <IonInput   placeholder="REPS">
-                    </IonInput>
-                </IonCard>
+                
                 </div>
 
                 <div className="cardContainerCenter">

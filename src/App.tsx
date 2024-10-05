@@ -29,6 +29,11 @@ import Stats from './pages/Stats';
 import Perfil from './pages/Perfil';
 import GameScene from './pages/GameScene';
 import Plan from './pages/Plan';
+import MainStore from './pages/MainStore';
+import Store from './pages/Store';
+import Inventory from './pages/Inventory';
+
+import ExcercisePage from './pages/ExcercisePage';
 
 
 setupIonicReact();
@@ -68,6 +73,18 @@ const App: React.FC = () => (
         </Route>
         <Route exact path="/plan">
         <Plan></Plan>
+        </Route>
+        <Route exact path="/mainstore">
+          <MainStore></MainStore>
+        </Route>
+        <Route exact path="/store">
+          <Store></Store>
+        </Route>
+        <Route exact path="/inventory">
+          <Inventory></Inventory>
+        </Route>
+        <Route exact path="/excercisepage">
+          <ExcercisePage></ExcercisePage>
         </Route>
         
         

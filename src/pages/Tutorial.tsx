@@ -10,7 +10,7 @@ const Tutorial: React.FC = () => {
     <IonPage>
       <IonHeader>
         <IonToolbar color="btoncolor">
-        <IonTitle>Tutorial</IonTitle>
+        <IonTitle>Bienvenida</IonTitle>
         </IonToolbar>
       </IonHeader>
 

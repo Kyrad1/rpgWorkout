@@ -1,0 +1,48 @@
+.inventory-title {
+    background-color: #ffc107;
+    text-align: center;
+    font-size: 24px;
+    
+  }
+  
+  .inventory-card {
+    color: white;
+    margin-top: 10px;
+    border-radius: 10px;
+  }
+  
+  .inventory-item-title {
+    font-size: 18px;
+    color: black
+  }
+  
+  .description-content {
+    background-color: #eaeaea;
+    color: black;
+    padding: 10px;
+    border-radius: 10px;
+  }
+  
+  .price-text {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .chip-row {
+    margin-top: 10px;
+  }
+  
+  .inventory-card-header {
+    background-color: #ffc107;
+  }
+  .inventory-card-header-inner {
+    background-color: #ffc107;
+  }
+  
+  
+  .back-button {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+  }
+  

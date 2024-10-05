@@ -22,27 +22,20 @@ const Home: React.FC = () => {
       <IonMenu contentId="main-content">
         <IonHeader >
           <IonToolbar color="btoncolor">
-            <IonTitle><p>Menú</p></IonTitle>
+            <IonTitle><p>Game Menú</p></IonTitle>
             
           </IonToolbar>
         </IonHeader>
         <IonContent className="ion-padding" color="bgcolor">
           <IonList>
             <IonItem>
-              <IonLabel><p>Tienda</p></IonLabel>
+              <IonLabel><a href='/MainStore'><p className='menu'>Store</p></a></IonLabel>
             </IonItem>
             <IonItem>
               <IonLabel><a href='/GameScene'><p className='menu'>Game Scene</p></a></IonLabel>
             </IonItem>
             <IonItem>
-              <IonLabel><p>Inventario</p></IonLabel>
-            </IonItem>
-            
-            <IonItem>
-              <IonLabel><p>Soporte</p></IonLabel>
-            </IonItem>
-            <IonItem>
-              <IonLabel><p>Configuracion</p></IonLabel>
+            <IonLabel><a href='/inventory'><p className='menu'>Game Scene</p></a></IonLabel>
             </IonItem>
           </IonList>
         </IonContent>
@@ -51,10 +44,10 @@ const Home: React.FC = () => {
         <IonHeader className='menuHeader'>
           <IonToolbar>
             <IonButtons slot="start">
-              <IonMenuButton></IonMenuButton>
+              <IonMenuButton color="light"></IonMenuButton>
             </IonButtons>
             
-              <IonTitle><p>Menu</p></IonTitle>
+              
               <IonButtons slot='end'>
                 <IonIcon icon={person} slot='end' ></IonIcon>
                 <a href='/login'><p>Login/Register</p></a>
@@ -71,23 +64,23 @@ const Home: React.FC = () => {
         </div>    
         <div className="cardContainer" >
           <IonCard href='/quest'  color='btoncolor' className='cardButton'>
-            <IonCardContent class='buttonMenuText'>
-            <p className='text2'>QUEST!</p>
+            <IonCardContent >
+            <p className='text'>Quest</p>
             </IonCardContent>
           </IonCard>
         </div>
         <div className="cardContainer">
           <IonCard href='/plan' color='btoncolor' className='cardButton'>
-            <IonCardContent class='buttonMenuText'>
-            <p className='text'>Crea tu plan de entrenamiento</p>
+            <IonCardContent >
+            <p className='text'>Create Workout Plan</p>
             </IonCardContent>
           </IonCard>
         </div>
         
         <div className="cardContainer">
           <IonCard href='/status' color='btoncolor' className='cardButton'>
-            <IonCardContent class='buttonMenuText'>
-            <p className='text2'>Status</p>
+            <IonCardContent >
+            <p className='text'>Stats</p>
             </IonCardContent>
           </IonCard>
         </div>
