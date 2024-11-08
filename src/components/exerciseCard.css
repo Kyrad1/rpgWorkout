@@ -1,0 +1,17 @@
+/* Estilos de la tarjeta */
+ion-card {
+    background-color: #123456; /* Fondo oscuro */
+    color: white;
+    border-radius: 8px;
+  }
+  
+  ion-col {
+    text-align: center;
+    font-weight: bold;
+  }
+  
+  ion-checkbox {
+    --background: white;
+    --border-color: white;
+  }
+  
