@@ -29,7 +29,7 @@ const Tab2: React.FC = () => {
 
         {/* Muestra cada ejercicio programado para el día seleccionado */}
         {exercises.map((exercise, index) => (
-          <ExerciseCard key={index} exerciseName={exercise.exerciseName} sets={exercise.sets} />
+          <ExerciseCard key={index} exerciseName={exercise.exerciseName} sets={exercise.sets}   showCheck= {true} onUpdateSets={(updatedSets) => {}} />
         ))}
       </IonContent>
     </IonPage>

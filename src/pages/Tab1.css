@@ -1,0 +1,16 @@
+.Titulo{
+    align-items: center;
+    text-align: center;
+    
+}
+.selectEx {
+    display: flex;
+    align-items: center;
+    gap: 2vw; /* Espacio entre IonSelect y IonButton, ajustado a un porcentaje del ancho de la ventana */
+    margin-bottom: 3vh; /* Espacio debajo del contenedor, ajustado a un porcentaje de la altura de la ventana */
+    margin-top: 3vh; /* Espacio arriba del contenedor (opcional) */
+    margin-left: 4vw; /* Margen izquierdo, ajustado al 4% del ancho de la ventana */
+    margin-right: 4vw; /* Margen derecho, ajustado al 4% del ancho de la ventana */
+    
+  }
+  

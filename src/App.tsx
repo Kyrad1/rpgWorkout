@@ -1,4 +1,3 @@
-import { Redirect, Route } from 'react-router-dom';
 import {
   IonApp,
   IonIcon,
@@ -30,7 +29,7 @@ import '@ionic/react/css/text-alignment.css';
 import '@ionic/react/css/text-transformation.css';
 import '@ionic/react/css/flex-utils.css';
 import '@ionic/react/css/display.css';
-import { WorkoutProvider } from './context/WorkoutContext'; // Importa el proveedor
+
 
 /**
  * Ionic Dark Mode
@@ -45,6 +44,9 @@ import '@ionic/react/css/palettes/dark.system.css';
 
 /* Theme variables */
 import './theme/variables.css';
+import { i } from 'vite/dist/node/types.d-aGj9QkWt';
+import { WorkoutProvider } from './context/WorkoutContext';
+import { Redirect, Route } from 'react-router';
 
 setupIonicReact();
 
@@ -60,13 +62,14 @@ const App: React.FC = () => (
             <Route exact path="/tab2">
               <Tab2 />
             </Route>
-            <Route path="/tab3">
+            <Route exact path="/tab3">
               <Tab3 />
             </Route>
             <Route exact path="/">
               <Redirect to="/tab1" />
             </Route>
           </IonRouterOutlet>
+
           <IonTabBar slot="bottom">
             <IonTabButton tab="tab1" href="/tab1">
               <IonIcon aria-hidden="true" icon={triangle} />
