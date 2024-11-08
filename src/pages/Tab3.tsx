@@ -1,28 +1,17 @@
-// Tab3.tsx
+// pages/Tab3.tsx
 import React from 'react';
 import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/react';
 import ReactECharts from 'echarts-for-react';
-import { useState } from 'react';
+import { useCharacter } from '../context/CharacterContext';
+import { useWorkoutContext } from '../context/WorkoutContext';
 
 const Tab3: React.FC = () => {
-  // Define las estadísticas iniciales del personaje
-  const [characterStats, setCharacterStats] = useState({
-    strength: 40,
-    endurance: 70,
-    agility: 50,
-    intelligence: 40,
-    charisma: 30,
-    luck: 50,
-  });
+  const { character } = useCharacter(); // Get the character from the context
+  const { weeklyPlan } = useWorkoutContext(); // Get the weekly workout plan from the context
 
-  // Configuración para el gráfico de radar
+  // Radar chart configuration
   const radarOptions = {
-    title: {
-      text: 'Character Stats',
-    },
-    tooltip: {},
     radar: {
-      // Define las áreas y los ejes del radar
       indicator: [
         { name: 'Strength', max: 100 },
         { name: 'Endurance', max: 100 },
@@ -34,19 +23,11 @@ const Tab3: React.FC = () => {
     },
     series: [
       {
-        name: 'Stats',
         type: 'radar',
         data: [
           {
-            value: [
-              characterStats.strength,
-              characterStats.endurance,
-              characterStats.agility,
-              characterStats.intelligence,
-              characterStats.charisma,
-              characterStats.luck,
-            ],
-            name: 'Character Stats',
+            value: character ? Object.values(character.stats) : [0, 0, 0, 0, 0, 0],
+            name: character ? character.name : 'No Character',
           },
         ],
       },
@@ -57,12 +38,19 @@ const Tab3: React.FC = () => {
     <IonPage>
       <IonHeader>
         <IonToolbar>
-          <IonTitle>Character Stats</IonTitle>
+          <IonTitle>Character Stats & Weekly Plan</IonTitle>
         </IonToolbar>
       </IonHeader>
       <IonContent fullscreen>
-        {/* Render del gráfico radar usando ReactECharts */}
-        <ReactECharts option={radarOptions} style={{ height: '400px', width: '100%' }} />
+        {character ? (
+          <div>
+            <h2>{character.name}'s Stats</h2>
+            <ReactECharts option={radarOptions} />
+            
+          </div>
+        ) : (
+          <div>No character selected</div>
+        )}
       </IonContent>
     </IonPage>
   );

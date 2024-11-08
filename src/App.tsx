@@ -47,46 +47,53 @@ import './theme/variables.css';
 import { i } from 'vite/dist/node/types.d-aGj9QkWt';
 import { WorkoutProvider } from './context/WorkoutContext';
 import { Redirect, Route } from 'react-router';
+import CreateCharacter from './pages/CreateCharacter';
+import { CharacterProvider } from './context/CharacterContext';
 
 setupIonicReact();
 
 const App: React.FC = () => (
   <IonApp>
-    <WorkoutProvider>
-      <IonReactRouter>
-        <IonTabs>
-          <IonRouterOutlet>
-            <Route exact path="/tab1">
-              <Tab1 />
-            </Route>
-            <Route exact path="/tab2">
-              <Tab2 />
-            </Route>
-            <Route exact path="/tab3">
-              <Tab3 />
-            </Route>
-            <Route exact path="/">
-              <Redirect to="/tab1" />
-            </Route>
-          </IonRouterOutlet>
+    <CharacterProvider>
+      <WorkoutProvider>
+        <IonReactRouter>
+          <IonTabs>
+            <IonRouterOutlet>
+              <Route exact path="/tab1">
+                <Tab1 />
+              </Route>
+              <Route exact path="/tab2">
+                <Tab2 />
+              </Route>
+              <Route exact path="/tab3">
+                <Tab3 />
+              </Route>
+              <Route exact path="/">
+                <Redirect to="/tab1" />
+              </Route>
+              <Route exact path= "/createcharacter">
+                <CreateCharacter></CreateCharacter>
+              </Route>
+            </IonRouterOutlet>
 
-          <IonTabBar slot="bottom">
-            <IonTabButton tab="tab1" href="/tab1">
-              <IonIcon aria-hidden="true" icon={triangle} />
-              <IonLabel>Plan</IonLabel>
-            </IonTabButton>
-            <IonTabButton tab="tab2" href="/tab2">
-              <IonIcon aria-hidden="true" icon={ellipse} />
-              <IonLabel>Quest</IonLabel>
-            </IonTabButton>
-            <IonTabButton tab="tab3" href="/tab3">
-              <IonIcon aria-hidden="true" icon={square} />
-              <IonLabel>Profile</IonLabel>
-            </IonTabButton>
-          </IonTabBar>
-        </IonTabs>
-      </IonReactRouter>
-    </WorkoutProvider>
+            <IonTabBar slot="bottom">
+              <IonTabButton tab="tab1" href="/tab1">
+                <IonIcon aria-hidden="true" icon={triangle} />
+                <IonLabel>Plan</IonLabel>
+              </IonTabButton>
+              <IonTabButton tab="tab2" href="/tab2">
+                <IonIcon aria-hidden="true" icon={ellipse} />
+                <IonLabel>Quest</IonLabel>
+              </IonTabButton>
+              <IonTabButton tab="tab3" href="/tab3">
+                <IonIcon aria-hidden="true" icon={square} />
+                <IonLabel>Profile</IonLabel>
+              </IonTabButton>
+            </IonTabBar>
+          </IonTabs>
+        </IonReactRouter>
+      </WorkoutProvider>
+    </CharacterProvider>
   </IonApp>
 );
 
