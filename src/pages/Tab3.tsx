@@ -7,7 +7,7 @@ import { useState } from 'react';
 const Tab3: React.FC = () => {
   // Define las estadísticas iniciales del personaje
   const [characterStats, setCharacterStats] = useState({
-    strength: 60,
+    strength: 40,
     endurance: 70,
     agility: 50,
     intelligence: 40,
