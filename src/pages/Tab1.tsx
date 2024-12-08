@@ -4,9 +4,110 @@ import { useWorkoutContext } from '../context/WorkoutContext';
 import ExerciseCard from '../components/excerciseCard';
 import './Tab1.css';
 import { saveSharp } from 'ionicons/icons';
+import '../context/CharacterContext';
 
 const daysOfWeek = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
-const availableExercises = ['Push-Ups', 'Pull-Ups', 'Squats', 'Dips', 'Chin-ups'];
+interface Estadisticas {
+  strength: number;
+  endurance: number;
+  agility: number;
+}
+
+
+interface Excercise {
+  id: number;
+  name: string;
+  stats: Estadisticas;
+  
+  
+}
+
+
+const excercises: [Excercise] = [
+  {
+    id: 9,
+    name: "Plank",
+    stats: {
+      strength: 4,
+      endurance: 5,
+      agility: 1
+    },
+    
+  },
+  {
+    id: 1,
+    name: "Push-Ups",
+    stats: {
+      strength: 5,
+      endurance: 4,
+      agility: 1
+    }
+  },
+  {
+    id: 2,
+    name: "Chin-Ups",
+    stats: {
+      strength: 5,
+      endurance: 3,
+      agility: 2
+    }
+  },
+  {
+    id: 3,
+    name: "Pull-Ups",
+    stats: {
+      strength: 5,
+      endurance: 4,
+      agility: 1
+  }
+  },
+  {
+    id: 4,
+    name: "Dips",
+    stats: {
+      strength: 5,
+      endurance: 3,
+      agility: 2
+    }
+  },
+  {
+    id: 5,
+    name: "Australian Push-Ups",
+    stats: {
+      strength: 4,
+      endurance: 4,
+      agility: 2
+    }
+  },
+  {
+    id: 6,
+    name: "Squats",
+    stats: {
+      strength: 4,
+      endurance: 3,
+      agility: 2
+    }
+  },
+  {
+    id: 7,
+    name: "Jumping Rope",
+    stats: {
+      strength: 1,
+      endurance: 4,
+      agility: 5
+    }
+  },
+  {
+    id: 8,
+    name: "Burpee",
+    stats: {
+      strength: 3,
+      endurance: 5,
+      agility: 2
+    }
+  }
+];
+const availableExercises = excercises.map((exercise) => exercise.name);
 
 const Tab1: React.FC = () => {
   const { updateWorkoutPlan } = useWorkoutContext();
@@ -110,7 +211,7 @@ const Tab1: React.FC = () => {
               <IonSelectOption key={day} value={day}>{day}</IonSelectOption>
             ))}
           </IonSelect>
-          <IonButton onClick={handleSaveWorkout}><IonIcon icon={saveSharp}></IonIcon></IonButton>
+          
         </div>
         <div className='selectEx'>
           <IonSelect
@@ -161,14 +262,15 @@ const Tab1: React.FC = () => {
               <IonButton color="danger" onClick={() => handleDeleteExercise(index)}>
                 Delete
               </IonButton>
-              <IonButton onClick={() => addSet(index)}>Add Set</IonButton>
+              <IonButton onClick={() => addSet(index)}>+ Series</IonButton>
               <IonButton onClick={() => removeSet(index)} disabled={exercise.sets.length <= 1}>
-                Remove Set
+                - Series
               </IonButton>
             </div>
           </div>
         ))}
       </IonContent>
+      <IonButton onClick={handleSaveWorkout} color='success'><IonIcon icon={saveSharp}></IonIcon>save</IonButton>
     </IonPage>
   );
 };

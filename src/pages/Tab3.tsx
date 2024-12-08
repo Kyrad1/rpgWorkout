@@ -7,7 +7,7 @@ import { useWorkoutContext } from '../context/WorkoutContext';
 
 const Tab3: React.FC = () => {
   const { character } = useCharacter(); // Get the character from the context
-  const { weeklyPlan } = useWorkoutContext(); // Get the weekly workout plan from the context
+  
 
   // Radar chart configuration
   const radarOptions = {
@@ -15,10 +15,8 @@ const Tab3: React.FC = () => {
       indicator: [
         { name: 'Strength', max: 100 },
         { name: 'Endurance', max: 100 },
-        { name: 'Agility', max: 100 },
-        { name: 'Intelligence', max: 100 },
-        { name: 'Charisma', max: 100 },
-        { name: 'Luck', max: 100 },
+        { name: 'Agility', max: 100 }
+        
       ],
     },
     series: [
@@ -26,7 +24,7 @@ const Tab3: React.FC = () => {
         type: 'radar',
         data: [
           {
-            value: character ? Object.values(character.stats) : [0, 0, 0, 0, 0, 0],
+            value: character ? Object.values(character.stats) : [0, 0, 0],
             name: character ? character.name : 'No Character',
           },
         ],
@@ -45,8 +43,14 @@ const Tab3: React.FC = () => {
         {character ? (
           <div>
             <h2>{character.name}'s Stats</h2>
+            <p><strong>Name:</strong> {character.name}</p>
+            <p><strong>Gender:</strong> {character.gender}</p>
+            <p><strong>Class:</strong> {character.class}</p>
+            <p><strong>Strength:</strong>{character.stats.strength}</p>
+            <p><strong>Endurance:</strong>{character.stats.endurance}</p>
+            <p><strong>Agility:</strong>{character.stats.agility}</p>
+
             <ReactECharts option={radarOptions} />
-            
           </div>
         ) : (
           <div>No character selected</div>

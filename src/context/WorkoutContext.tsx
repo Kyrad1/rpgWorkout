@@ -37,6 +37,7 @@ export const useWorkoutContext = () => {
   return context;
 };
 
+
 // Tipo de las props del proveedor, incluyendo `children`
 interface WorkoutProviderProps {
   children: ReactNode;
