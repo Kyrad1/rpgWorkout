@@ -4,9 +4,15 @@ import { useWorkoutContext } from '../context/WorkoutContext';
 import ExerciseCard from '../components/excerciseCard';
 import './Tab1.css';
 import { saveSharp } from 'ionicons/icons';
+import '../context/CharacterContext';
+import {excercises,Exercise} from  '../context/WorkoutContext';
+
 
 const daysOfWeek = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
-const availableExercises = ['Push-Ups', 'Pull-Ups', 'Squats', 'Dips', 'Chin-ups'];
+
+const availableExercises = excercises.map((exercise) => exercise.exerciseName);
+
+
 
 const Tab1: React.FC = () => {
   const { updateWorkoutPlan } = useWorkoutContext();
@@ -54,9 +60,26 @@ const Tab1: React.FC = () => {
     }
   };
 
-  // Función para guardar el plan de entrenamiento
   const handleSaveWorkout = () => {
-    updateWorkoutPlan(selectedDay, exercises);
+    const updatedExercises: Exercise[] = exercises.map(exercise => {
+      const foundExercise = excercises.find(e => e.exerciseName === exercise.exerciseName);
+  
+      if (foundExercise) {
+        return {
+          exerciseName: foundExercise.exerciseName,
+          stats: foundExercise.stats, // Usamos las estadísticas del ejercicio
+          sets: exercise.sets,        // Usamos las series seleccionadas
+        };
+      }
+  
+      return {
+        exerciseName: exercise.exerciseName,
+        stats: { strength: 0, endurance: 0, agility: 0 }, // Valor predeterminado
+        sets: exercise.sets,
+      };
+    });
+  
+    updateWorkoutPlan(selectedDay, updatedExercises);
   };
 
   // Función para eliminar un ejercicio
@@ -110,7 +133,7 @@ const Tab1: React.FC = () => {
               <IonSelectOption key={day} value={day}>{day}</IonSelectOption>
             ))}
           </IonSelect>
-          <IonButton onClick={handleSaveWorkout}><IonIcon icon={saveSharp}></IonIcon></IonButton>
+          
         </div>
         <div className='selectEx'>
           <IonSelect
@@ -161,14 +184,15 @@ const Tab1: React.FC = () => {
               <IonButton color="danger" onClick={() => handleDeleteExercise(index)}>
                 Delete
               </IonButton>
-              <IonButton onClick={() => addSet(index)}>Add Set</IonButton>
+              <IonButton onClick={() => addSet(index)}>+ Series</IonButton>
               <IonButton onClick={() => removeSet(index)} disabled={exercise.sets.length <= 1}>
-                Remove Set
+                - Series
               </IonButton>
             </div>
           </div>
         ))}
       </IonContent>
+      <IonButton onClick={handleSaveWorkout} color='success'><IonIcon icon={saveSharp}></IonIcon>save</IonButton>
     </IonPage>
   );
 };

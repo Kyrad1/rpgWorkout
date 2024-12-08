@@ -5,13 +5,11 @@ import React, { createContext, useState, ReactNode, useContext } from 'react';
 interface Character {
   name: string;
   class: string;
+  gender: string;
   stats: {
     strength: number;
     endurance: number;
     agility: number;
-    intelligence: number;
-    charisma: number;
-    luck: number;
   };
 }
 

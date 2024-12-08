@@ -9,11 +9,17 @@ interface Set {
 }
 
 // Definimos el tipo de un ejercicio
-interface Exercise {
+export interface Exercise {
   exerciseName: string;
-  sets: Set[];
+  stats: Estadisticas; 
+  sets: Set[]; 
 }
 
+interface Estadisticas {
+  strength: number;
+  endurance: number;
+  agility: number;
+}
 // Definimos el tipo de los planes diarios, mapeados por día de la semana
 type WeeklyPlan = {
   [day: string]: Exercise[];
@@ -37,10 +43,115 @@ export const useWorkoutContext = () => {
   return context;
 };
 
+
 // Tipo de las props del proveedor, incluyendo `children`
 interface WorkoutProviderProps {
   children: ReactNode;
 }
+interface Estadisticas {
+  strength: number;
+  endurance: number;
+  agility: number;
+}
+
+
+
+
+
+
+export const excercises: Exercise[] = [
+  {
+    
+    exerciseName: "Plank",
+    stats: {
+      strength: 4,
+      endurance: 5,
+      agility: 1
+    },
+    sets: [], // Inicialmente no tiene sets
+  },
+  {
+    
+    exerciseName: "Push-Ups",
+    stats: {
+      strength: 5,
+      endurance: 4,
+      agility: 1
+    },
+    sets: [],
+  },
+  {
+  
+    exerciseName: "Chin-Ups",
+    stats: {
+      strength: 5,
+      endurance: 3,
+      agility: 2
+    },
+    sets: [],
+  },
+  {
+   
+    exerciseName: "Pull-Ups",
+    stats: {
+      strength: 5,
+      endurance: 4,
+      agility: 1
+    },
+    sets: [],
+  },
+  {
+   
+    exerciseName: "Dips",
+    stats: {
+      strength: 5,
+      endurance: 3,
+      agility: 2
+    },
+    sets: [],
+  },
+  {
+    
+    exerciseName: "Australian Push-Ups",
+    stats: {
+      strength: 4,
+      endurance: 4,
+      agility: 2
+    },
+    sets: [],
+  },
+  {
+    
+    exerciseName: "Squats",
+    stats: {
+      strength: 4,
+      endurance: 3,
+      agility: 2
+    },
+    sets: [],
+  },
+  {
+    
+    exerciseName: "Jumping Rope",
+    stats: {
+      strength: 1,
+      endurance: 4,
+      agility: 5
+    },
+    sets: [],
+  },
+  {
+    
+    exerciseName: "Burpee",
+    stats: {
+      strength: 3,
+      endurance: 5,
+      agility: 2
+    },
+    sets: [],
+  }
+];
+
 
 // Proveedor del contexto
 export const WorkoutProvider: React.FC<WorkoutProviderProps> = ({ children }) => {

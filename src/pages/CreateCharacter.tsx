@@ -9,13 +9,14 @@ const CreateCharacter: React.FC = () => {
   const { setCharacter } = useCharacter(); // Use the context to store the character
 
   const [name, setName] = useState<string>('');
-  const [selectedClass, setSelectedClass] = useState<'Warrior' | 'Mage' | 'Thief'>('Warrior');
+  const [selectedClass, setSelectedClass] = useState<'Warrior' | 'Tank' | 'Thief'>('Warrior');
+  const [selectedGender, setSelectedGender] = useState<'Male' | 'Female' | 'Other'>('Male'); // New gender state
 
   const getClassStats = (className: string) => {
     const stats: any = {
-      Warrior: { strength: 80, endurance: 70, agility: 50, intelligence: 40, charisma: 50, luck: 30 },
-      Mage: { strength: 40, endurance: 40, agility: 60, intelligence: 90, charisma: 60, luck: 50 },
-      Thief: { strength: 50, endurance: 60, agility: 80, intelligence: 60, charisma: 50, luck: 80 },
+      Warrior: { strength: 10, endurance: 5, agility:2 },
+      Tank: { strength: 5, endurance: 10, agility: 2 },
+      Thief: { strength: 5, endurance: 2, agility: 10},
     };
     return stats[className];
   };
@@ -29,6 +30,7 @@ const CreateCharacter: React.FC = () => {
     const newCharacter = {
       name,
       class: selectedClass,
+      gender: selectedGender, // Include gender in the character object
       stats: getClassStats(selectedClass),
     };
 
@@ -47,11 +49,18 @@ const CreateCharacter: React.FC = () => {
         <IonLabel>Enter your character's name:</IonLabel>
         <IonInput value={name} onIonChange={(e) => setName(e.detail.value!)} placeholder="Character Name" />
 
-        <IonLabel>Select your character's class:</IonLabel>
+        <IonLabel>Select your starter character's class:</IonLabel>
         <IonSelect value={selectedClass} onIonChange={(e) => setSelectedClass(e.detail.value)}>
           <IonSelectOption value="Warrior">Warrior</IonSelectOption>
-          <IonSelectOption value="Mage">Mage</IonSelectOption>
+          <IonSelectOption value="Tank">Tank</IonSelectOption>
           <IonSelectOption value="Thief">Thief</IonSelectOption>
+        </IonSelect>
+
+        <IonLabel>Select your character's gender:</IonLabel>
+        <IonSelect value={selectedGender} onIonChange={(e) => setSelectedGender(e.detail.value)}>
+          <IonSelectOption value="Male">Male</IonSelectOption>
+          <IonSelectOption value="Female">Female</IonSelectOption>
+          <IonSelectOption value="Other">Other</IonSelectOption>
         </IonSelect>
 
         <IonButton onClick={handleCreateCharacter} expand="full">Create Character</IonButton>
