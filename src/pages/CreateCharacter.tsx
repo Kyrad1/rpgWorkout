@@ -14,9 +14,9 @@ const CreateCharacter: React.FC = () => {
 
   const getClassStats = (className: string) => {
     const stats: any = {
-      Warrior: { strength: 10, endurance: 5, agility:2 },
-      Tank: { strength: 5, endurance: 10, agility: 2 },
-      Thief: { strength: 5, endurance: 2, agility: 10},
+      Warrior: { strength: 0, endurance: 0, agility:0 },
+      Tank: { strength: 0, endurance: 0, agility: 0 },
+      Thief: { strength: 0, endurance: 0, agility: 0},
     };
     return stats[className];
   };
