@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">rpgworkout</string>
+    <string name="title_activity_main">rpgworkout</string>
+    <string name="package_name">com.example.rpgworkout</string>
+    <string name="custom_url_scheme">com.example.rpgworkout</string>
+</resources>

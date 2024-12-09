@@ -9,17 +9,7 @@ interface Set {
 }
 
 // Definimos el tipo de un ejercicio
-export interface Exercise {
-  exerciseName: string;
-  stats: Estadisticas; 
-  sets: Set[]; 
-}
 
-interface Estadisticas {
-  strength: number;
-  endurance: number;
-  agility: number;
-}
 // Definimos el tipo de los planes diarios, mapeados por día de la semana
 type WeeklyPlan = {
   [day: string]: Exercise[];
@@ -53,7 +43,17 @@ interface Estadisticas {
   endurance: number;
   agility: number;
 }
+export interface Exercise {
+  exerciseName: string;
+  stats: Estadisticas; 
+  sets: Set[]; 
+}
 
+interface Estadisticas {
+  strength: number;
+  endurance: number;
+  agility: number;
+}
 
 
 

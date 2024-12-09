@@ -49,8 +49,21 @@ import { WorkoutProvider } from './context/WorkoutContext';
 import { Redirect, Route } from 'react-router';
 import CreateCharacter from './pages/CreateCharacter';
 import { CharacterProvider } from './context/CharacterContext';
+import { useEffect } from 'react';
+import { initializeDatabase, insertInitialData } from './services/database';
+
 
 setupIonicReact();
+useEffect(() => {
+  const setupDatabase = async () => {
+    const db = await initializeDatabase();
+    if (db) {
+      await insertInitialData(db);
+    }
+  };
+
+  setupDatabase();
+}, []);
 
 const App: React.FC = () => (
   <IonApp>
